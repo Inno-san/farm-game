@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1783717739
+::res://::1783862932
 credits.txt::TextFile::-1::1783526697::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::8036811108842534944::1783526697::1783526697::1::::<><><>0<>0<>caf523e604f3a4e860ca8e8889af97f8<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://audio/::1783526697
@@ -32,6 +32,6 @@ tools.png::CompressedTexture2D::1465238757189077439::1783526697::1783526697::1::
 ::res://scenes/::1783526697
 ::res://scenes/level/::1783530124
 game.tscn::PackedScene::2790468327447799555::1783530124::0::1::::<><><>0<>0<><>::uid://ca106qafnt25o::::res://scenes/player/player.tscn<>uid://dmrddtd4ybheu::::res://icon.svg
-::res://scenes/player/::1783532204
-player.gd::GDScript::7015577742639963115::1783530361::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::4828089314040900478::1783532204::0::1::::<><><>0<>0<><>::uid://c67nsm0fp16cl::::res://scenes/player/player.gd<>uid://dpfxibevth7y::::res://graphics/characters/player_animations.png
+::res://scenes/player/::1783721524
+player.gd::GDScript::7015577742639963115::1783721405::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::4828089314040900478::1783721524::0::1::::<><><>0<>0<><>::uid://c67nsm0fp16cl::::res://scenes/player/player.gd<>uid://dpfxibevth7y::::res://graphics/characters/player_animations.png

@@ -39,7 +39,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "method"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -69,7 +69,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "method"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -99,7 +99,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "method"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -129,7 +129,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "method"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -755,6 +755,8 @@ states/walk/node = SubResource("AnimationNodeBlendSpace2D_uf5tr")
 states/walk/position = Vector2(564.24, 98.182396)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_3j4b4"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_dovo2"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_gmlin")]
 
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_dovo2"]
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yewv4"]
 animation = &"axe_left"
 
@@ -942,16 +944,18 @@ states/hoe/position = Vector2(382.597, 128.745)
 states/water/node = SubResource("AnimationNodeBlendSpace2D_rfou0")
 states/water/position = Vector2(848.392, 128.361)
 transitions = ["Start", "hoe", SubResource("AnimationNodeStateMachineTransition_aqa0x"), "hoe", "axe", SubResource("AnimationNodeStateMachineTransition_yhyq5"), "axe", "hoe", SubResource("AnimationNodeStateMachineTransition_5jukt"), "axe", "End", SubResource("AnimationNodeStateMachineTransition_yewv4"), "hoe", "End", SubResource("AnimationNodeStateMachineTransition_76oj4"), "axe", "water", SubResource("AnimationNodeStateMachineTransition_w5bca"), "water", "axe", SubResource("AnimationNodeStateMachineTransition_j057w"), "water", "End", SubResource("AnimationNodeStateMachineTransition_18mi3"), "hoe", "water", SubResource("AnimationNodeStateMachineTransition_dyp2m"), "water", "hoe", SubResource("AnimationNodeStateMachineTransition_atpat")]
-graph_offset = Vector2(166, -45)
+graph_offset = Vector2(128.16867, -236)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_6eyoc"]
-graph_offset = Vector2(-318.44662, -51.23464)
+graph_offset = Vector2(-111.93076, 55.655785)
 nodes/output/position = Vector2(944, 96)
 nodes/ToolStateMachine/node = SubResource("AnimationNodeStateMachine_vwwfy")
-nodes/ToolStateMachine/position = Vector2(128, 80)
+nodes/ToolStateMachine/position = Vector2(400, 272)
 nodes/MoveStateMachine/node = SubResource("AnimationNodeStateMachine_fm80t")
 nodes/MoveStateMachine/position = Vector2(400, -48)
-node_connections = [&"output", 0, &"MoveStateMachine"]
+nodes/OneShot/node = SubResource("AnimationNodeOneShot_dovo2")
+nodes/OneShot/position = Vector2(704, 96)
+node_connections = [&"output", 0, &"OneShot", &"OneShot", 0, &"MoveStateMachine", &"OneShot", 1, &"ToolStateMachine"]
 
 [node name="Player" type="CharacterBody2D" unique_id=568348724]
 collision_layer = 2
@@ -977,5 +981,10 @@ parameters/ToolStateMachine/hoe/blend_position = Vector2(-0.536646, -0.652174)
 parameters/ToolStateMachine/water/blend_position = Vector2(0, 0)
 parameters/MoveStateMachine/idle/blend_position = Vector2(0, 1)
 parameters/MoveStateMachine/walk/blend_position = Vector2(0, 0)
+parameters/OneShot/active = false
+parameters/OneShot/internal_active = false
+parameters/OneShot/request = 0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=653432821]
+
+[connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
