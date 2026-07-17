@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1783862932
+::res://::1784304332
 credits.txt::TextFile::-1::1783526697::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::8036811108842534944::1783526697::1783526697::1::::<><><>0<>0<>caf523e604f3a4e860ca8e8889af97f8<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://audio/::1783526697
@@ -9,6 +9,7 @@ music.mp3::AudioStreamMP3::2247835294849576512::1783526697::1783526697::1::::<><
 step.mp3::AudioStreamMP3::7522451785145360687::1783526697::1783526697::1::::<><><>0<>0<>09bc957d2879e15b845f9199008a7b74<>res://.godot/imported/step.mp3-8b7ff5084cde852e60b453d2dce7c3ab.mp3str::
 water.ogg::AudioStreamOggVorbis::4248563746777119678::1783526697::1783526697::1::::<><><>0<>0<>cf15b0f458ba6f0fed1a8228564d39ab<>res://.godot/imported/water.ogg-2779ae9a47f8b69344227b630792e3fd.oggvorbisstr::
 ::res://globals/::1761309488
+global.gd::GDScript::3913007865091796990::1784306213::0::1::::<>Node<><>0<>0<><>::
 ::res://graphics/::1783526697
 ::res://graphics/characters/::1783526697
 player_animations.png::CompressedTexture2D::241877277390805020::1783526697::1783526697::1::::<><><>0<>0<>30ce91325b62598f4f17832574a5f22f<>res://.godot/imported/player_animations.png-085bd40ee6b10a0e29cd815022dcbf1a.ctex::
@@ -29,9 +30,16 @@ water.png::CompressedTexture2D::4270928415532932893::1783526697::1783526697::1::
 ::res://graphics/ui/::1783526697
 seeds.png::CompressedTexture2D::3397057532938973764::1783526697::1783526697::1::::<><><>0<>0<>4a427b38397b0202db156a43fddd322b<>res://.godot/imported/seeds.png-87cf94ec19ed44e083b27e8e869687c3.ctex::
 tools.png::CompressedTexture2D::1465238757189077439::1783526697::1783526697::1::::<><><>0<>0<>c66c0f7879b1386ce304449195c7a3f9<>res://.godot/imported/tools.png-796554a693020cd441bfe2181619a4fd.ctex::
-::res://scenes/::1783526697
-::res://scenes/level/::1783530124
-game.tscn::PackedScene::2790468327447799555::1783530124::0::1::::<><><>0<>0<><>::uid://ca106qafnt25o::::res://scenes/player/player.tscn<>uid://dmrddtd4ybheu::::res://icon.svg
-::res://scenes/player/::1783721524
-player.gd::GDScript::7015577742639963115::1783721405::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::4828089314040900478::1783721524::0::1::::<><><>0<>0<><>::uid://c67nsm0fp16cl::::res://scenes/player/player.gd<>uid://dpfxibevth7y::::res://graphics/characters/player_animations.png
+::res://scenes/::1784305433
+::res://scenes/level/::1784305994
+flash.gdshader::Shader::3733211369444502260::1784304505::0::1::::<><><>0<>0<><>::
+game.gd::GDScript::7893546902547614884::1784306152::0::1::::<>Node2D<><>0<>0<><>::
+game.tscn::PackedScene::2790468327447799555::1784306152::0::1::::<><><>0<>0<><>::uid://baw527j36pxgi::::res://graphics/tilesets/grass.png<>uid://ca106qafnt25o::::res://scenes/player/player.tscn<>uid://dkpxtgih67bcm::::res://scenes/level/game.gd<>uid://b134tjp5ngghx::::res://graphics/tilesets/water.png<>uid://c15lysgtp52wu::::res://graphics/tilesets/soil.png<>uid://dcwcdle3cjkv6::::res://graphics/tilesets/hills.png<>uid://tm3lp3cnjf6v::::res://scenes/level/trees.tscn<>uid://byfag0kgqavgo::::res://graphics/tilesets/soil_water.png
+trees.gd::GDScript::7597358420078275763::1784036129::0::1::::<>StaticBody2D<><>0<>0<><>::
+trees.tscn::PackedScene::1360081112915127071::1784036216::0::1::::<><><>0<>0<><>::uid://c4nvxvw1wr0ja::::res://graphics/tilesets/trees.png<>uid://dgihna76tn1j8::::res://scenes/level/trees.gd<>uid://btgnpfmy8x3nc::::res://scenes/level/flash.gdshader
+::res://scenes/plants/::1784306053
+plant.tscn::PackedScene::3268655991509396238::1784306115::0::1::::<><><>0<>0<><>::uid://lcymer2isb2i::::res://graphics/plants/corn.png
+plant.gd::GDScript::5324820644042052984::1784306163::0::1::::<>StaticBody2D<><>0<>0<><>::
+::res://scenes/player/::1784305093
+player.gd::GDScript::7015577742639963115::1784305093::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::4828089314040900478::1784305093::0::1::::<><><>0<>0<><>::uid://c67nsm0fp16cl::::res://scenes/player/player.gd<>uid://dpfxibevth7y::::res://graphics/characters/player_animations.png

@@ -1,3 +1,8 @@
 res://scenes/player/player.tscn
+res://scenes/level/flash.gdshader
 res://scenes/player/player.gd
+res://scenes/level/game.gd
 res://scenes/level/game.tscn
+res://scenes/plants/plant.tscn
+res://scenes/plants/plant.gd
+res://globals/global.gd

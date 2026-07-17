@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://tm3lp3cnjf6v"]
+
+[ext_resource type="Texture2D" uid="uid://c4nvxvw1wr0ja" path="res://graphics/tilesets/trees.png" id="1_8utsl"]
+[ext_resource type="Script" uid="uid://dgihna76tn1j8" path="res://scenes/level/trees.gd" id="1_hynsj"]
+[ext_resource type="Shader" uid="uid://btgnpfmy8x3nc" path="res://scenes/level/flash.gdshader" id="2_wcvhg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wcvhg"]
+resource_local_to_scene = true
+shader = ExtResource("2_wcvhg")
+shader_parameter/progress = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iyypf"]
+size = Vector2(8, 17)
+
+[node name="Trees" type="StaticBody2D" unique_id=392510010 groups=["Trees"]]
+script = ExtResource("1_hynsj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1406608545]
+material = SubResource("ShaderMaterial_wcvhg")
+texture = ExtResource("1_8utsl")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1786896203]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_iyypf")
