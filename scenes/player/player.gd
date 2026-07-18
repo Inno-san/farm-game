@@ -31,6 +31,10 @@ func _physics_process(_delta: float) -> void:
 		get_input()
 	if direction:
 		last_direction =direction
+		if not $stepstimer.time_left:
+			$stepstimer.start()
+	else:
+		$steps.stop()
 	velocity = direction * speed * int(can_move)
 	move_and_slide()
 	animation()
@@ -77,3 +81,7 @@ func _on_animation_tree_animation_finished(_anim_name: StringName) -> void:
 
 func axe_use():
 	tool_use.emit(current_tools,position+last_direction*tool_direction_offset+Vector2(0,tool_y_offset))
+
+
+func _on_stepstimer_timeout() -> void:
+	$steps.play()

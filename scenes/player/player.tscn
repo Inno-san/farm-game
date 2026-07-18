@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c67nsm0fp16cl" path="res://scenes/player/player.gd" id="1_dovo2"]
 [ext_resource type="Texture2D" uid="uid://dpfxibevth7y" path="res://graphics/characters/player_animations.png" id="2_yewv4"]
+[ext_resource type="AudioStream" uid="uid://dff6xghytlqqh" path="res://audio/step.mp3" id="3_gmlin"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yewv4"]
 radius = 5.0
@@ -987,4 +988,11 @@ parameters/OneShot/request = 0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=653432821]
 
+[node name="steps" type="AudioStreamPlayer2D" parent="." unique_id=390315632]
+stream = ExtResource("3_gmlin")
+
+[node name="stepstimer" type="Timer" parent="." unique_id=1784912875]
+wait_time = 0.5
+
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
+[connection signal="timeout" from="stepstimer" to="." method="_on_stepstimer_timeout"]
